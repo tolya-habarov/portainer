@@ -36,14 +36,10 @@
             ],
             "volumes": [
                 {
-                    "container": "/config",
-                    "bind": "./config",
-                    "readonly": false
+                    "container": "/config"
                 },
                 {
-                    "container": "/downloads",
-                    "bind": "./downloads",
-                    "readonly": false
+                    "container": "/downloads"
                 }
             ],
             "ports": [
