@@ -13,31 +13,38 @@
             "image": "lscr.io/linuxserver/qbittorrent:latest",
             "env": [
                 {
-                    "name": "CONFIG_PATH",
-                    "default": "./config",
+                    "name": "PUID",
+                    "default": "1000",
                     "preset": true
                 },
                 {
-                    "name": "CONFIG_PATH",
-                    "default": "./downloads",
+                    "name": "PGID",
+                    "default": "1000",
                     "preset": true
+                },
+                {
+                    "name": "TZ",
+                    "default": "Asia/Novosibirsk"
                 },
                 {
                     "name": "WEBUI_PORT",
-                    "default": "8080",
-                    "preset": true
+                    "default": "8080"
                 }
             ],
             "volumes": [
                 {
-                    "container": "/config"
+                    "container": "/config",
+                    "bind": "./config",
+                    "readonly": false
                 },
                 {
-                    "container": "/downloads"
+                    "container": "/downloads",
+                    "bind": "./downloads",
+                    "readonly": false
                 }
             ],
             "ports": [
-                "8080/tcp"
+                "8080:8080/tcp"
             ]
         }
     ]

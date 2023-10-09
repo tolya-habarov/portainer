@@ -10,7 +10,7 @@ services:
       - TZ=Asia/Novosibirsk
       - WEBUI_PORT=8080
     volumes:
-      - ${CONFIG_PATH:-./config}:/config
-      - ${DOWNLOAD_PATH:-./downloads}:/downloads
+      - ./config:/config
+      - ./downloads:/downloads
     ports:
-      - ${WEBUI_PORT}:8080
+      - 8080:8080
