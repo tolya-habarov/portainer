@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  qbittorrent:
+    image: lscr.io/linuxserver/qbittorrent:latest
+    container_name: qbittorrent
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Novosibirsk
+      - WEBUI_PORT=8080
+    volumes:
+      - ${CONFIG_PATH:-./config}:/config
+      - ${DOWNLOAD_PATH:-./downloads}:/downloads
+    ports:
+      - ${WEBUI_PORT}:8080

@@ -1,0 +1,44 @@
+{
+    "version": "2",
+    "templates": [
+        {
+            "type": 1,
+            "title": "qBittorrent",
+            "description": "qBittorrent is a cross-platform free and open-source BitTorrent client written in native C++. It relies on Boost, Qt 6 toolkit and the libtorrent-rasterbar library (for the torrent back-end), with an optional search engine written in Python.",
+            "categories": [
+                "docker"
+            ],
+            "platform": "linux",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/6/66/New_qBittorrent_Logo.svg",
+            "image": "lscr.io/linuxserver/qbittorrent:latest",
+            "env": [
+                {
+                    "name": "CONFIG_PATH",
+                    "default": "./config",
+                    "preset": true
+                },
+                {
+                    "name": "CONFIG_PATH",
+                    "default": "./downloads",
+                    "preset": true
+                },
+                {
+                    "name": "WEBUI_PORT",
+                    "default": "8080",
+                    "preset": true
+                }
+            ],
+            "volumes": [
+                {
+                    "container": "/config"
+                },
+                {
+                    "container": "/downloads"
+                }
+            ],
+            "ports": [
+                "8080/tcp"
+            ]
+        }
+    ]
+}
