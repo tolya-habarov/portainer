@@ -50,7 +50,7 @@
             "type": 1,
             "name": "silverbullet",
             "title": "Silverbullet",
-            "description": "SilverBullet is an extensible, [open source](https://github.com/silverbulletmd/silverbullet), **personal knowledge management** system. Indeed, that’s fancy talk for “a note-taking app with links.” However, SilverBullet goes _a bit_ beyond just that.",
+            "description": "SilverBullet is an extensible, https://github.com/silverbulletmd/silverbullet, personal knowledge management system. Indeed, that’s fancy talk for “a note-taking app with links.” However, SilverBullet goes _a bit_ beyond just that.",
             "categories": [
                 "docker"
             ],
@@ -67,9 +67,6 @@
             "volumes": [
                 {
                     "container": "/space"
-                },
-                {
-                    "container": "./space"
                 }
             ],
             "ports": [
