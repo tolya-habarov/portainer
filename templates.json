@@ -45,6 +45,33 @@
             "ports": [
                 "8080:8080/tcp"
             ]
+        },
+        {
+            "type": 1,
+            "name": "silverbullet",
+            "title": "Silverbullet",
+            "description": "SilverBullet is an extensible, https://github.com/silverbulletmd/silverbullet, personal knowledge management system. Indeed, that’s fancy talk for “a note-taking app with links.” However, SilverBullet goes _a bit_ beyond just that.",
+            "categories": [
+                "docker"
+            ],
+            "platform": "linux",
+            "logo": "https://avatars.githubusercontent.com/u/108344757?s=48&v=4",
+            "image": "zefhemel/silverbullet:latest",
+            "env": [
+                {
+                    "name": "SB_HOSTNAME",
+                    "label": "SB_HOSTNAME",
+                    "default": "0.0.0.0"
+                }
+            ],
+            "volumes": [
+                {
+                    "container": "/space"
+                }
+            ],
+            "ports": [
+                "3000:3000/tcp"
+            ]
         }
     ]
 }
