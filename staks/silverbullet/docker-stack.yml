@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  silverbullet:
+    image: zefhemel/silverbullet
+    container_name: silverbullet
+    restart: unless-stopped
+    environment:
+      - SB_HOSTNAME=0.0.0.0
+    volumes:
+      - ./space:/space
+    ports:
+      - 3000:3000
