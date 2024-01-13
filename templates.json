@@ -84,18 +84,6 @@
             "platform": "linux",
             "logo": "https://nginxproxymanager.com/icon.png",
             "image": "jc21/nginx-proxy-manager:latest",
-            "env": [
-                {
-                    "name": "PUID",
-                    "label": "PUID",
-                    "default": "1000"
-                },
-                {
-                    "name": "PGID",
-                    "label": "PGID",
-                    "default": "1000"
-                }
-            ],
             "volumes": [
                 {
                     "container": "/data"
